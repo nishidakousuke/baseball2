@@ -1,0 +1,18 @@
+= form_for @result do |f|
+  - @batters.each do |batter|
+    = batter.name
+     
+    = f.label :bats, style: { 'margin-right' => 8 } do
+      = f.select :bats, options_for_select(1..4), {}, { autofocus: 'true', class: 'birthday-select__year'}
+    = f.label :hitting, style: { 'margin-right' => 8 } do
+      = f.select :hitting, options_for_select(1..4), {}, { autofocus: 'true', class: 'birthday-select__year'}
+    = f.label :homerun, style: { 'margin-right' => 8 } do
+      = f.select :homerun, options_for_select(1..4), {}, { autofocus: 'true', class: 'birthday-select__year'}
+    = f.label :point, style: { 'margin-right' => 8 } do
+      = f.select :point, options_for_select(1..4), {}, { autofocus: 'true', class: 'birthday-select__year'}
+    = f.label :steal, style: { 'margin-right' => 8 } do
+      = f.select :steal, options_for_select(1..4), {}, { autofocus: 'true', class: 'birthday-select__year'}
+    = f.label :batter_id, style: { 'margin-right' => 8 } do
+      = f.select :batter_id, options_for_select(1..4), {}, { autofocus: 'true', class: 'birthday-select__year'}
+
+    = f.submit
